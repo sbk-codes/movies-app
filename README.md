@@ -16,4 +16,4 @@ This assignment is about writing a small Ruby On Rails application. Use a method
 
 7. Sort the overview by average stars (rating) in an efficient way
 
-**Design CSV importer/application for heavy data processing 
+### Design CSV importer/application for heavy data processing
