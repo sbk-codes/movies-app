@@ -36,10 +36,49 @@
     tr:hover {
       background-color: #ddd;
     }
+    .center-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .search-form {
+      margin: 20px 0;
+      text-align: center;
+    }
+    .search-form__form {
+      display: inline-block;
+      text-align: left;
+    }
+    .search-form__label {
+      font-size: 14px;
+      margin-right: 10px;
+    }
+    .search-form__input {
+      padding: 6px 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 14px;
+      max-width: 300px;
+    }
+    .search-form__submit {
+      padding: 6px 12px;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+    }
   </style>
 </head>
 <body>
-  <h1>Movie Overview</h1>
+  <div class="center-container">
+    <div>
+      <h1>Movie Overview</h1>
+      <%= render partial: 'search_form' %>
+    </div>
+  </div>
+
   <table>
     <thead>
       <tr>
@@ -50,6 +89,7 @@
         <th>Actor</th>
         <th>Filming Location</th>
         <th>Country</th>
+        <th>Ratings</th>
         <th>Added on</th>
       </tr>
     </thead>
@@ -63,6 +103,7 @@
           <td><%= movie.actor %></td>
           <td><%= movie.filming_location %></td>
           <td><%= movie.country %></td>
+          <td><%= calculate_average_rating(movie) %></td></td>
           <td><%= time_ago_in_words(movie.created_at) %></td>
         </tr>
       <% end %>
