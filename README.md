@@ -23,7 +23,7 @@ Design CSV importer/application for heavy data processing
 ### Solution
 I tackled the problem by following a systematic approach. I began with creating a CSV importer using a readable structure. I designed models for movies and reviews with relevant fields like actors and average rating.
 
-For the UI, I developed an organized HTML.erb file with a user-friendly design and a search form for actors. I optimized sorting using SQL joins to resolve N+1 query issues.
+For the UI, I developed an organized HTML.erb file with a user-friendly design and a search form for actors. I optimized sorting by adding a new field average_rating.
 
 To ensure data integrity, I integrated a Review model callback that updates a movie's average rating when a new review is added.
 
