@@ -29,6 +29,9 @@ To ensure data integrity, I integrated a Review model callback that updates a mo
 
 Throughout the process, I addressed challenges such as querying arrays and syntax errors. This experience highlighted the significance of structured development and refinement for a functional and visually appealing application.
 
+
+Note: Added pgsearch to make searching convenient, this was done after T + 20 minutes
+
 ---
 
 ### After Installation
