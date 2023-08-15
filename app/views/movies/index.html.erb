@@ -103,7 +103,7 @@
           <td><%= movie.actors.to_sentence %></td>
           <td><%= movie.filming_location %></td>
           <td><%= movie.country %></td>
-          <td><%= calculate_average_rating(movie) %></td></td>
+          <td><%= movie.average_rating %></td></td>
           <td><%= time_ago_in_words(movie.created_at) %></td>
         </tr>
       <% end %>
