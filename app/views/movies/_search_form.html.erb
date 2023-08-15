@@ -1,7 +1,7 @@
 <div class="search-form">
   <%= form_tag movies_path, method: :get, class: 'search-form__form' do %>
     <%= label_tag :actor, "Search by Actor:", class: 'search-form__label' %>
-    <%= text_field_tag :actor, nil, class: 'search-form__input' %>
+    <%= text_field_tag :actor, @params[:actor], class: 'search-form__input' %>
     <%= submit_tag "Search", class: 'search-form__submit' %>
   <% end %>
 </div>
