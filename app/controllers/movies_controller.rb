@@ -1,5 +1,5 @@
 class MoviesController < ApplicationController
   def index
-    @movies = Movie.left_joins(:reviews).group(:id).order('AVG(reviews.stars) DESC NULLS LAST')
+    @movies = Movie.all.order(average_rating: :desc)
   end
 end

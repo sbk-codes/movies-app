@@ -5,9 +5,10 @@ class CreateMovies < ActiveRecord::Migration[5.1]
       t.text :description
       t.integer :year
       t.string :director
-      t.string :actor
+      t.jsonb :actors, default: []
       t.string :filming_location
       t.string :country
+      t.float :average_rating, default: 0.0
 
       t.timestamps
     end

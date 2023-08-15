@@ -21,12 +21,13 @@ def import_csv_data(file_name, import_method)
 end
 
 def import_movie(row)
-  Movie.create!(
-    title: row['Movie'],
+  movie = Movie.find_or_initialize_by(title: row['Movie'])
+  updated_actors = movie.actors.push(row['Actor']).uniq
+  movie.update!(
     description: row['Description'],
     year: row['Year'],
     director: row['Director'],
-    actor: row['Actor'],
+    actors: updated_actors,
     filming_location: row['Filming location'],
     country: row['Country']
   )
