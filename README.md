@@ -33,7 +33,11 @@ Throughout the process, I addressed challenges such as querying arrays and synta
 
 ### After Installation
 
-To Import CSV Data
+To Import CSV Data, Run:
 ```
 rake import:csv_data
 ```
+
+### Pending Task
+- Addition of Pagination
+- Test cases
